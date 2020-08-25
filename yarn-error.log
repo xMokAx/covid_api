@@ -1,0 +1,52 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\ahmed\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js dev
+
+PATH: 
+  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NGX;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\ahmed\Downloads\platform-tools;C:\Program Files\nodejs\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\ahmed\AppData\Local\Programs\Python\Python38-32\Scripts\;C:\Users\ahmed\AppData\Local\Programs\Python\Python38-32\;C:\Ruby26-x64\bin;C:\Users\ahmed\AppData\Local\Microsoft\WindowsApps;C:\Users\ahmed\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\ahmed\AppData\Local\hyper\app-3.0.2\resources\bin;C:\Users\ahmed\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin;C:\Users\ahmed\AppData\Roaming\npm;C:\Users\ahmed\AppData\Local\Yarn\bin;C:\Users\ahmed\AppData\Roaming\Python\Python38\Scripts;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\ahmed\Downloads\cmder\vendor\bin;C:\Users\ahmed\Downloads\cmder\bin;C:\Users\ahmed\Downloads\cmder;C:\Users\ahmed\Downloads\cmder\vendor\git-for-windows\cmd;C:\Users\ahmed\Downloads\cmder\vendor\git-for-windows\mingw64\bin;C:\Users\ahmed\Downloads\cmder\vendor\git-for-windows\usr\bin;C:\Users\ahmed\Downloads\cmder\vendor\bin;C:\Users\ahmed\Downloads\cmder
+
+Yarn version: 
+  1.21.0
+
+Node version: 
+  12.16.3
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: C:\Users\ahmed\OneDrive\Desktop\coding\projects\gevme\covid_api\package.json: Unexpected token } in JSON at position 260
+      at JSON.parse (<anonymous>)
+      at C:\Users\ahmed\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Users\ahmed\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:304:30)
+      at C:\Users\ahmed\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "covid_api",
+    "version": "1.0.0",
+    "description": "backend for the covid slayer game",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "dev": "nodemon index.js",
+      "start": "node index.js",
+    },
+    "author": "Ahmed Mokhtar",
+    "license": "ISC",
+    "dependencies": {
+      "cookie-session": "^1.4.0",
+      "dotenv": "^8.2.0",
+      "express": "^4.17.1",
+      "mongoose": "^5.10.0"
+    },
+    "devDependencies": {
+      "nodemon": "^2.0.4"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
