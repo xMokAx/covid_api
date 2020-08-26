@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 
 const config = require("./config");
 const authRouter = require("./routes/auth");
+const matchesRouter = require("./routes/matches");
 
 dotenv.config();
 
@@ -34,6 +35,7 @@ app.use(function (req, res, next) {
 app.use(express.json());
 
 authRouter(app);
+matchesRouter(app);
 
 app.listen(process.env.port || config.port, () =>
   console.log("server is running...")

@@ -4,13 +4,12 @@ const {
   signinValidation,
   tokenValidation,
 } = require("../utils/validation");
-const { findByEmail, findById, createUser } = require("../models/user");
+const { findByEmail, findById, createUser } = require("../models/User");
 const jwt = require("jsonwebtoken");
 
 module.exports = function (app) {
   app.post("/signup", async (req, res) => {
     try {
-      console.log(req.body);
       const { error } = signupValidation(req.body);
 
       // validation errors
