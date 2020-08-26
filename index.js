@@ -1,11 +1,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const dotenv = require("dotenv");
 
 const authRouter = require("./routes/auth");
 const matchesRouter = require("./routes/matches");
 
-dotenv.config();
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
 
 // connect to db
 mongoose.connect(process.env.DB_CONNECT, {
