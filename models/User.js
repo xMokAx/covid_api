@@ -27,7 +27,6 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model("Users", userSchema);
 
 exports.findByEmail = async (email) => {
-  console.log(email);
   const user = await User.findOne({ email: email }, "-__v");
   if (!user) {
     return user;

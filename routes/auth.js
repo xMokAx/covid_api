@@ -47,7 +47,13 @@ module.exports = function (app) {
           }
         );
 
-        return res.status(201).send({ token, userId: savedUser._id });
+        return res
+          .status(201)
+          .send({
+            token,
+            userId: savedUser._id,
+            createdAt: savedUser.createdAt,
+          });
       } catch (error) {
         return res.status(400).send({ error });
       }

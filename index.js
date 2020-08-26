@@ -9,12 +9,20 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 // connect to db
-mongoose.connect(process.env.DB_CONNECT, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  process.env.DB_CONNECT,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  },
+  () => console.log("database connected...")
+);
 
 const app = express();
+
+app.get("/", (_req, res) => {
+  res.send("Hello Covid");
+});
 
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
