@@ -2,7 +2,6 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 
-const config = require("./config");
 const authRouter = require("./routes/auth");
 const matchesRouter = require("./routes/matches");
 
@@ -37,6 +36,4 @@ app.use(express.json());
 authRouter(app);
 matchesRouter(app);
 
-app.listen(process.env.port || config.port, () =>
-  console.log("server is running...")
-);
+app.listen(process.env.PORT || 5000, () => console.log("server is running..."));
